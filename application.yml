@@ -1,1 +1,13 @@
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true  # Enable registration with Eureka server
+    fetch-registry: true  # Enable fetching registry from Eureka server
+    healthcheck:
+      enabled: false  # Disable Eureka healthcheck feature (not required for actuator)
+
+  instance:
+    hostname: localhost  # Your instance hostname
+    prefer-ip-address: true  # Prefer IP address instead of hostname for Eureka server registration
